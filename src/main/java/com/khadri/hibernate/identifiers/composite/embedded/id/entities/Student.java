@@ -1,4 +1,4 @@
-package com.khadri.hibernate.identifiers.composite.entities;
+package com.khadri.hibernate.identifiers.composite.embedded.id.entities;
 
 import javax.persistence.Basic;
 import javax.persistence.EmbeddedId;

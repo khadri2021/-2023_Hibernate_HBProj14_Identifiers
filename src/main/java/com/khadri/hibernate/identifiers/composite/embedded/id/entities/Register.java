@@ -1,4 +1,4 @@
-package com.khadri.hibernate.identifiers.composite.entities;
+package com.khadri.hibernate.identifiers.composite.embedded.id.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -16,6 +16,7 @@ public class Register implements Serializable{
 	private int registerNo;
 
 	private String registerName;
+	 
 
 	public int getRegisterNo() {
 		return registerNo;

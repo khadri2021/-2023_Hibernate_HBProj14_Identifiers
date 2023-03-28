@@ -9,7 +9,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.khadri.hibernate.identifiers.composite.entities.Student;
+import com.khadri.hibernate.identifiers.simple.entities.Student;
+
 
 
 public class MainSimpleIdentifiers {
@@ -28,10 +29,12 @@ public class MainSimpleIdentifiers {
 		Session session = factory.openSession();
 
 		Transaction txn = session.beginTransaction();
-
 		
+		Student student = new Student();
+		student.setId(3);
+		student.setName("JHON");
 
-		session.save(null);
+		session.save(student);
 		txn.commit();
 		session.close();
 		factory.close();
