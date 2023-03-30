@@ -1,4 +1,4 @@
-package com.khadri.hibernate.identifiers.simple.entities;
+package com.khadri.hibernate.identifiers.id.entities;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;

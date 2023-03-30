@@ -9,12 +9,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.khadri.hibernate.identifiers.composite.idclass.entities.Student;
+import com.khadri.hibernate.identifiers.generated.identifiers.identity.Student;
 
-
-public class MainCompositeIdClassIdentifier {
-
-	public static void main(String[] args) throws Exception {
+public class MainIdentity {
+	public static void main(String[] args)throws Exception {
 		Configuration cfg = new Configuration();
 
 		Properties properties = new Properties();
@@ -27,13 +25,13 @@ public class MainCompositeIdClassIdentifier {
 
 		Session session = factory.openSession();
 
+		
 		Transaction txn = session.beginTransaction();
 		Student student = new Student();
-		student.setId(101, "JHON");
-		student.setSchoolName("KHADRI");
-		
+		student.setName("KHADRI-sdfsdf");
+
 		session.save(student);
-		
+
 		txn.commit();
 		session.close();
 		factory.close();

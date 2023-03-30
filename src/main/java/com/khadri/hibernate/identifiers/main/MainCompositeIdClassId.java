@@ -9,10 +9,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.khadri.hibernate.identifiers.composite.embedded.id.entities.Register;
-import com.khadri.hibernate.identifiers.composite.embedded.id.entities.Student;
+import com.khadri.hibernate.identifiers.composite.idclass.entities.Student;
 
-public class MainCompositeIdentifer {
+
+public class MainCompositeIdClassId {
 
 	public static void main(String[] args) throws Exception {
 		Configuration cfg = new Configuration();
@@ -28,18 +28,12 @@ public class MainCompositeIdentifer {
 		Session session = factory.openSession();
 
 		Transaction txn = session.beginTransaction();
-		
 		Student student = new Student();
-		Register register = new Register();
-		register.setRegisterNo(101);
-		register.setRegisterName("ALLEN");
-		
-		student.setId(register);//its composite id
+		student.setId(101, "JHON");
 		student.setSchoolName("KHADRI");
 		
-		
-
 		session.save(student);
+		
 		txn.commit();
 		session.close();
 		factory.close();

@@ -9,11 +9,13 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.khadri.hibernate.identifiers.generated.identifiers.auto.Student;
+import com.khadri.hibernate.identifiers.id.entities.Student;
 
 
-public class MainAuto {
-	public static void main(String[] args)throws Exception {
+
+public class MainIdIdentifer {
+
+	public static void main(String[] args) throws Exception {
 		Configuration cfg = new Configuration();
 
 		Properties properties = new Properties();
@@ -27,12 +29,12 @@ public class MainAuto {
 		Session session = factory.openSession();
 
 		Transaction txn = session.beginTransaction();
+		
 		Student student = new Student();
-//		student.setId(1);
-		student.setName("ALLEN");
+		student.setId(3);
+		student.setName("JHON");
 
 		session.save(student);
-
 		txn.commit();
 		session.close();
 		factory.close();
