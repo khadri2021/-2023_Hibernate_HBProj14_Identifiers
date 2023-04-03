@@ -32,10 +32,10 @@ public class MainCompositeIdEmbeddedId {
 		Student student = new Student();
 		Register register = new Register();
 		register.setRegisterNo(101);
-		register.setRegisterName("ALLEN");
+		register.setRegisterName("ALLEN2");
 		
 		student.setId(register);//its composite id
-		student.setSchoolName("KHADRI");
+		student.setSchoolName("KHADRI-2");
 		
 		
 

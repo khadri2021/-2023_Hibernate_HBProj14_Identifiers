@@ -29,7 +29,7 @@ public class MainCompositeIdClassId {
 
 		Transaction txn = session.beginTransaction();
 		Student student = new Student();
-		student.setId(101, "JHON");
+		student.setId(101, "JHON3");
 		student.setSchoolName("KHADRI");
 		
 		session.save(student);
